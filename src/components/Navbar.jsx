@@ -80,7 +80,7 @@ const Navbar = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <div style={{ display: 'flex' }}>
-        <AppBar component="nav" sx={{ color: '#092C4C', p: 1.5 }} color='transparent' >
+        <AppBar component="nav" sx={{ color: '#092C4C', p: 1.5 }} color='transparent' position='fixed' >
           <Toolbar>
             <div style={{ flexGrow: 1 }}>
               <img src={Logo} alt="DSpatch" style={{ width: '25%' }} />
@@ -139,6 +139,7 @@ const Navbar = (props) => {
           </Drawer>
         </Box>
       </div>
+      <Toolbar />
     </ThemeProvider>
   )
 }
