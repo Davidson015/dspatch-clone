@@ -7,16 +7,14 @@ export default makeStyles( (theme) => ({
   },
 
   jumbotron: {
-    // width: '100%',
     backgroundColor: '#092C4C',
-    minHeight: '90vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     
-    '@media (min-width: 375px) and (max-width: 600px)': {
-      height: '100vh',
-    }
+    // '@media (min-width: 375px) and (max-width: 600px)': {
+    //   height: '100vh',
+    // }
   },
 
   phoneMockup: {
@@ -34,5 +32,15 @@ export default makeStyles( (theme) => ({
     '@media (max-width: 600px)': {
       width: '35%',
     }
+  },
+
+  placeholders: {
+    width: '100%',
+    backgroundColor: '#BDBDBD',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    fontWeight: 'bold'
   }
 }));
