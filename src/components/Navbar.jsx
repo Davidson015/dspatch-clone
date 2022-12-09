@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { ThemeProvider } from '@mui/material/styles';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 // Assets
 import theme from '../assets/theme';
@@ -35,6 +36,7 @@ const navItems = [
 ];
 
 const Navbar = (props) => {
+  const trigger = useScrollTrigger();
   const { window } = props;
   const container = window !== undefined ? () => window().document.body : undefined;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -80,7 +82,16 @@ const Navbar = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <div style={{ display: 'flex' }}>
-        <AppBar component="nav" sx={{ color: '#092C4C', p: 1.5 }} color='transparent' position='fixed' >
+        <AppBar
+          component="nav"
+          sx={{
+            color: '#092C4C',
+            backgroundColor: '#ffffff',
+            p: 1.5
+          }}
+          position='fixed'
+          elevation={ trigger ? 4 : 0 }
+        >
           <Toolbar>
             <div style={{ flexGrow: 1 }}>
               <img src={Logo} alt="DSpatch" style={{ width: '25%' }} />
