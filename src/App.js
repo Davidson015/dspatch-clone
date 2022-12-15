@@ -1,4 +1,4 @@
-import { Navbar, Button } from "./components";
+import { Navbar, Button, Footer } from "./components";
 import { LandingPage } from "./pages";
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Navbar />
       <LandingPage />
+      <Footer />
     </div>
   );
 }
